@@ -5,6 +5,8 @@ from djangoappengine.settings_base import *
 
 import os
 
+DEBUG = True
+
 # Activate django-dbindexer for the default database
 DATABASES['native'] = DATABASES['default']
 DATABASES['default'] = {'ENGINE': 'dbindexer', 'TARGET': 'native'}
@@ -49,3 +51,9 @@ STATIC_URL = '/static/'
 TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), 'templates'),)
 
 ROOT_URLCONF = 'urls'
+
+
+######## facebook 
+
+FACEBOOK_APP_ID = '441646785863774'
+FACEBOOK_APP_SECRET = 'c41135702c2ea76f16675d7524df923a'
